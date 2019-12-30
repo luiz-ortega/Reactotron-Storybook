@@ -1,7 +1,8 @@
-import Reactotron, {storybook} from 'reactotron-react-native';
+import Reactotron, {storybook, overlay} from 'reactotron-react-native';
 
 if (__DEV__) {
   const tron = Reactotron.configure()
+    .use(overlay())
     .useReactNative({
       storybook: true,
     })
